@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        
+        int s1, s2, s3, count=0;
+        
+        int inNum = sc.nextInt();
+        
+        s1 = inNum/100;
+        s2 = (inNum-s1*100)/10;
+        s3 = (inNum-s1*100-s2*10);
+        
+        if(s1 == 1) count++;
+        if(s2 == 1) count++;
+        if(s3 == 1) count++;
+        
+        System.out.println(count);
+        sc.close();
+    }
+}
