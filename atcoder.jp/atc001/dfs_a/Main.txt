@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Main {
+
+	static int max = 0;
+	static int count = 0;
+	static int H;
+	static int W;
+	static String[][] c;
+	static boolean flag = false;
+	static boolean[][] reached;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		H = sc.nextInt();
+		W = sc.nextInt();
+
+		max = H*W;
+
+		c = new String[H][W];
+		reached = new boolean[H][W];
+
+		int sH = 0, sW = 0;
+		int gH, gW;
+
+		for(int i=0; i<H; i++) {
+			String[] strs = sc.next().split("");
+			for(int j=0; j<strs.length; j++) {
+				c[i][j] = strs[j];
+				if(strs[j].equals("s")) {
+					sH = i;
+					sW = j;
+				}
+			}
+		}
+
+		dfs(sH, sW);
+		System.out.println(flag ? "Yes" : "No");
+	}
+
+	public static void dfs(int h, int w) {
+		if(h >= H || h < 0 || w >= W || w < 0 || c[h][w].equals("#") || reached[h][w]) {
+			return;
+		}
+		if(c[h][w].equals("g")) {
+			flag = true;
+			return;
+		}
+
+		reached[h][w] = true;
+		dfs(h-1, w);
+		dfs(h+1, w);
+		dfs(h, w-1);
+		dfs(h, w+1);
+
+		return;
+	}
+}
