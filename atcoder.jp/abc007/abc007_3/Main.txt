@@ -1,0 +1,78 @@
+import java.awt.*;
+import java.io.PrintWriter;
+import java.math.BigInteger;
+import java.util.*;
+
+public class Main {
+
+    static String br = System.getProperty("line.separator");
+    static Scanner sc = new Scanner(System.in);
+    static PrintWriter out = new PrintWriter(System.out);
+
+    public static void main(String[] args) {
+        int Y = nextInt();
+        int X = nextInt();
+
+        int sy = nextInt()-1;
+        int sx = nextInt()-1;
+        int gy = nextInt()-1;
+        int gx = nextInt()-1;
+        Point start = new Point(sx, sy);
+        Point goal = new Point(gx, gy);
+
+        char[][] c = new char[Y][X];
+        for(int i=0; i<Y; i++){
+            c[i] = next().toCharArray();
+        }
+
+        Deque<Point> deque = new ArrayDeque<>();
+        deque.add(start);
+
+        int[] dx = {-1, 0, 0, 1}, dy = {0, -1, 1, 0};
+
+        int count = 0;
+        out:for(;!deque.isEmpty(); count++){
+            for (int i=deque.size(); i>0; i--) {
+                Point poll = deque.poll();
+                c[poll.y][poll.x] = '#';
+                for (int j = 0; j < 4; j++) {
+                    if (poll.equals(goal)) {
+                        break out;
+                    }
+                    if (c[poll.y + dy[j]][poll.x + dx[j]] == '.') {
+                        c[poll.y + dy[j]][poll.x + dx[j]] = '#';
+                        deque.add(new Point(poll.x + dx[j], poll.y + dy[j]));
+                    }
+                }
+            }
+        }
+        println(count);
+    }
+
+    static int nextInt() {
+        return Integer.parseInt(next());
+    }
+
+    static Long nextLong() {
+        return Long.parseLong(next());
+    }
+
+    static String next() {
+        return sc.next();
+    }
+
+    static String nextLine(){
+        return sc.nextLine();
+    }
+
+    static void println(Object o) {
+        out.println(o);
+        out.flush();
+    }
+
+    static void print(Object o) {
+        PrintWriter out = new PrintWriter(System.out);
+        out.print(o);
+        out.flush();
+    }
+}
