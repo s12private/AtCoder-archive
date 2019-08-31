@@ -1,0 +1,12 @@
+{
+	"id": 7218245,
+	"epoch_second": 1567225826,
+	"problem_id": "ttpc2019_b",
+	"contest_id": "ttpc2019",
+	"user_id": "Shigeki",
+	"language": "Java8 (OpenJDK 1.8.0)",
+	"point": 100,
+	"length": 1382,
+	"result": "AC",
+	"execution_time": 97
+}
