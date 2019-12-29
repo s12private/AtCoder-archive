@@ -1,0 +1,12 @@
+{
+	"id": 9200095,
+	"epoch_second": 1577597562,
+	"problem_id": "abc143_b",
+	"contest_id": "abc143",
+	"user_id": "Shigeki",
+	"language": "Java8 (OpenJDK 1.8.0)",
+	"point": 200,
+	"length": 1369,
+	"result": "AC",
+	"execution_time": 102
+}
