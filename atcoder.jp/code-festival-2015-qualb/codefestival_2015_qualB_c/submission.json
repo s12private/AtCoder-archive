@@ -1,0 +1,12 @@
+{
+	"id": 17863759,
+	"epoch_second": 1604415240,
+	"problem_id": "codefestival_2015_qualB_c",
+	"contest_id": "code-festival-2015-qualb",
+	"user_id": "Shigeki",
+	"language": "C++ (GCC 9.2.1)",
+	"point": 100,
+	"length": 773,
+	"result": "AC",
+	"execution_time": 364
+}
