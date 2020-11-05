@@ -1,0 +1,12 @@
+{
+	"id": 17891264,
+	"epoch_second": 1604576139,
+	"problem_id": "jsc2019_qual_b",
+	"contest_id": "jsc2019-qual",
+	"user_id": "Shigeki",
+	"language": "C++ (GCC 9.2.1)",
+	"point": 300,
+	"length": 687,
+	"result": "AC",
+	"execution_time": 33
+}
