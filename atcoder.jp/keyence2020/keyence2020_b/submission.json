@@ -1,0 +1,12 @@
+{
+	"id": 18667352,
+	"epoch_second": 1607583682,
+	"problem_id": "keyence2020_b",
+	"contest_id": "keyence2020",
+	"user_id": "Shigeki",
+	"language": "C++ (GCC 9.2.1)",
+	"point": 200,
+	"length": 537,
+	"result": "AC",
+	"execution_time": 77
+}
